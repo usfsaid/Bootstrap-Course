@@ -10,12 +10,336 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
-    <h1>helllo</h1>
-    <button class="btn btn-primary">btn primary</button>
+    <div class="container">
+      <h1>Bootstrap Grid System</h1>
+      <!-- 
+    Screen          Width
 
-    <!-- css Bootstrap -->
-    <link rel="stylesheet" href="/assets/js/bootstrap.bundle.min.js" />
-    <!-- css file -->
+    xs or (col)     <  576px
+    sm              >= 576px
+    md              >= 768px
+    lg              >= 992px
+    xl              >= 1200px
+    xxl             >= 1400px
+    col-auto        size text only
+
+    -->
+
+      <h1>vertical & Horizontal Alignment</h1>
+
+      <!-- vertical Alignment 
+    
+    All column
+    align-content-start  => top
+    align-content-center  => middle
+    align-content-end  => botton
+
+    each column
+    align-self-start  => top
+    align-self-center  => middle
+    align-self-end  => botton
+
+    -->
+
+      <!-- Horizontal Alignment
+
+      justify-content-start  => row in start
+      justify-content-center  => row in middle
+      justify-content-end  => row in end
+      justify-content-around  => space around  column
+      justify-content-evenly  => space around  column
+      justify-content-between  => space between column
+    
+    -->
+
+      <h1>Bootstrap Colors</h1>
+      <!-- 
+
+    bg- => background
+
+
+      primary
+      secondary
+      success
+      danger
+      warning
+      info
+      light
+      dark
+    -->
+      <div class="row">
+        <div class="col">
+          <div class="bg-primary text-light">color 1</div>
+          <div class="bg-secondary text-primary">color 2</div>
+          <div class="bg-success">color 3</div>
+          <div class="bg-danger">color 4</div>
+          <div class="bg-warning">color 5</div>
+          <div class="bg-info">color 6</div>
+          <div class="bg-light">color 7</div>
+          <div class="bg-dark">color 8</div>
+        </div>
+      </div>
+
+      <h1>Bootstrap Alert</h1>
+
+      <!--  -->
+
+      <div class="alert alert-danger d-flex gap-3">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-info-circle-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"
+          />
+        </svg>
+        <p class="m-0">Hi ,Pleace Tray Again</p>
+      </div>
+
+      <h1>Bootstrap Button</h1>
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-outline-primary">Primary</button>
+      <div class="btn-toolbar">
+        <div class="btn-group">
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-primary">Primary</button>
+        </div>
+        <div class="btn-group">
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-primary">Primary</button>
+          <button class="btn btn-primary">Primary</button>
+        </div>
+      </div>
+
+      <h1>Excrice Bootstrap</h1>
+      <div class="row bg-dark p-1">
+        <div class="col-8">
+          <button class="btn btn-primary">click</button>
+        </div>
+        <div class="col-1">
+          <button class="btn btn-primary">click</button>
+        </div>
+        <div class="col-2 ms-3">
+          <button class="btn btn-primary ms-3">click</button>
+        </div>
+      </div>
+      <div class="row justify-content-center bg-primary">
+        <div class="col col-2">
+          <button class="btn btn-dark">click</button>
+        </div>
+      </div>
+      <div class="row p-1 bg-dark justify-content-between">
+        <div class="col-2">
+          <button class="btn btn-primary">click</button>
+        </div>
+        <div class="col-2">
+          <button class="btn btn-primary">click</button>
+        </div>
+        <div class="col-2">
+          <button class="btn btn-primary">click</button>
+        </div>
+      </div>
+
+      <!-- ========================================================================== -->
+      <h1>Bootstrap Cards</h1>
+      <!-- 
+        card
+          card-img-position
+          card-body
+            card-title
+            card-text
+          card-footer
+            btn
+      -->
+      <div class="card" style="width: 18rem">
+        <img src="/assets/imgs/computer.jpg" class="card-img-top" alt="..." />
+        <div class="card-body bg-dark">
+          <h5 class="card-title text-warning">Card title</h5>
+          <p class="card-text text-light">
+            Some quick example text to build on the card title and make up the
+            bulk of the card’s content.
+          </p>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary bg-danger">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ========================================================================== -->
+      <h1>Bootstrap Carousel Slider</h1>
+
+      <!-- slider -->
+      <div id="c1" class="carousel slide">
+        <!-- imags -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="/assets/imgs/pexels-altaf-shah-3143825-17308134.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/assets/imgs/pexels-altaf-shah-3143825-17308138.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/assets/imgs/pexels-altaf-shah-3143825-17308140.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+
+          <!-- ========================================================================== -->
+        </div>
+
+        <!--left & right arrow  -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#c1"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#c1"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+        <!-- indicators -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#c1"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#c1"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#c1"
+            data-bs-slide-to="2"
+          ></button>
+        </div>
+      </div>
+      <!-- ======================================================================== -->
+
+      <h1>Bootstrap Dropdown</h1>
+
+      <div class="dropdown">
+        <!-- dropdown-toggle -->
+        <button
+          class="dropdown-toggle btn btn-danger"
+          data-bs-toggle="dropdown"
+        >
+          Dropdown
+        </button>
+        <!-- dropdown-list -->
+        <ul class="dropdown-menu">
+          <li>
+            <a href="" class="dropdown-item">list 1</a>
+          </li>
+          <li>
+            <a href="" class="dropdown-item">list 1</a>
+          </li>
+          <li>
+            <a href="" class="dropdown-item">list 1</a>
+          </li>
+          <li>
+            <a href="" class="dropdown-item">list 1</a>
+          </li>
+          <li>
+            <a href="" class="dropdown-item">list 1</a>
+          </li>
+        </ul>
+      </div>
+      <!-- ======================================================================= -->
+      <!-- Bootstrap Breadcrumb -->
+      <h1>Bootstrap Breadcrum</h1>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#home">Home</a></li>
+          <li class="breadcrumb-item"><a href="#about">About</a></li>
+          <li class="breadcrumb-item"><a href="#contact">ContactUs</a></li>
+        </ol>
+      </nav>
+
+      <section id="home">
+        <h1>Home</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+          doloribus magni? Dolorem, sapiente sunt. Nulla quos tempora cupiditate
+          mollitia ea aperiam iste perspiciatis. Laboriosam dolore fugiat
+          aperiam expedita, at deserunt!
+        </p>
+      </section>
+      <section id="about">
+        <h1>About</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+          doloribus magni? Dolorem, sapiente sunt. Nulla quos tempora cupiditate
+          mollitia ea aperiam iste perspiciatis. Laboriosam dolore fugiat
+          aperiam expedita, at deserunt!
+        </p>
+      </section>
+      <section id="contact">
+        <h1>ContactUs</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint,
+          doloribus magni? Dolorem, sapiente sunt. Nulla quos tempora cupiditate
+          mollitia ea aperiam iste perspiciatis. Laboriosam dolore fugiat
+          aperiam expedita, at deserunt!
+        </p>
+      </section>
+
+      <!-- =========================================================================== -->
+      <!-- Bootstrap Collapse -->
+      <h1>Bootstrap Collapse</h1>
+      <button
+        class="btn btn-primary"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseExample"
+      >
+        Collapse Button
+      </button>
+      <div class="collapse" id="collapseExample">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, natus
+        accusamus in ipsa fugiat est doloremque iure labore assumenda fuga
+        dolorum laboriosam reiciendis inventore vitae blanditiis beatae aperiam?
+        Laboriosam, earum?
+      </div>
+
+      <!-- ========================================================================== -->
+      <!--  Bootstrap Form -->
+      <h1>Bootstrap Form</h1>
+    </div>
+
+    <!-- JavaScript Bootstrap -->
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript file -->
     <script src="/assets/js/main.js"></script>
   </body>
 </html>
